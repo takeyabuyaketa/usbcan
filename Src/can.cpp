@@ -77,12 +77,12 @@ void can_enable(void)
         hcan.Init.Prescaler = prescaler;
         hcan.Init.Mode = CAN_MODE_NORMAL;
         hcan.Init.SyncJumpWidth = CAN_SJW_1TQ;
-        hcan.Init.TimeSeg1 = CAN_BS1_14TQ;
-        hcan.Init.TimeSeg2 = CAN_BS2_3TQ;
+        hcan.Init.TimeSeg1 = CAN_BS1_15TQ;
+        hcan.Init.TimeSeg2 = CAN_BS2_2TQ;
         hcan.Init.TimeTriggeredMode = DISABLE;
         hcan.Init.AutoBusOff = DISABLE;
         hcan.Init.AutoWakeUp = DISABLE;
-        hcan.Init.AutoRetransmission = DISABLE;
+        hcan.Init.AutoRetransmission = ENABLE;
         hcan.Init.ReceiveFifoLocked = DISABLE;
         hcan.Init.TransmitFifoPriority = DISABLE;
         HAL_CAN_Init(&hcan);
